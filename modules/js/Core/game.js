@@ -902,7 +902,7 @@ define(['dojo', 'dojo/_base/declare', g_gamethemeurl + 'modules/js/vendor/nouisl
       // Fast replay mode
       if (this.isFastMode()) {
         dojo.place(newNode, target, 'replace');
-        return;
+        return Promise.resolve();
       }
 
       return new Promise((resolve, reject) => {
